@@ -17,18 +17,31 @@ cp .env.example .env    # add your OPENAI_API_KEY
 
 ## Running a lab
 
-Each lab has a `starter/` (what you get in the live session) and a `solution/`
-(the worked reference). Run either with:
+A lab's `starter/` is what you get in the live session. Run it with:
 
 ```bash
-npm run lab labs/01-workflow-router/solution/index.ts
+npm run lab labs/01-workflow-router/starter/index.ts
 ```
 
-Run the tests that prove a solution behaves:
+Each starter lands the week before its lab runs; the worked `solution/` is
+published after that session, so you get a go at it first. Today that means
+`00-patterns` and Lab 1 are here, and Labs 2 to 5 are specified but not yet
+scaffolded (see [The labs](#the-labs)).
+
+### The tests are the brief
 
 ```bash
 npm test
 ```
+
+**These fail on a fresh clone. That is the point.** A lab's test file is its
+spec: it describes exactly what your implementation must do, and you are done
+when it is green. Read the test before you write any code.
+
+The tests need no API key and make no network calls. Every lab injects its model
+access, so the parts worth testing (which route, what happens when a tier fails,
+what it cost) are deterministic. If you cannot test your routing without calling
+a model, the seam is in the wrong place — that is a lesson, not a limitation.
 
 ## The labs
 
@@ -41,8 +54,10 @@ npm test
 | 5 | [`05-eval-harness`](labs/05-eval-harness) | A trajectory-based eval harness with regression detection |
 | 6 | [`capstone`](capstone) | The 7-section system design document template |
 
-Week 1 is fully worked as the reference for how every lab is structured. The
-rest ship with a README and starter, and are filled in during the cohort.
+`00-patterns` is the S1 sampler: fully worked, runnable today, and the reference
+for how the patterns look in code. Lab 1 ships with a starter and its full test
+suite. Labs 2 to 5 currently ship with a README that specifies what you build;
+their starters land in the week before each lab runs.
 
 ## Repo layout
 

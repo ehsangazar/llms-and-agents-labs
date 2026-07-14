@@ -15,14 +15,31 @@ cost split across the three tiers.
 - A cost report: how much traffic each tier absorbed
 
 ## Where to start
+
+1. Read [`router.test.ts`](router.test.ts). **It is the brief.** Every rule this
+   router must follow is written there as a failing test.
+2. Fill in the four TODOs in [`starter/router.ts`](starter/router.ts):
+   `chooseTier`, `validateReply`, `runRouter`, and `Ledger.report`.
+3. `npm test` until it is green. No API key needed.
+4. Then `npm run lab labs/01-workflow-router/starter/index.ts` to run it against
+   a real model and print the bill.
+
 The routing pattern this lab hardens is demonstrated minimally in
 [`../00-patterns/patterns/02-routing.ts`](../00-patterns/patterns/02-routing.ts).
 The shared LLM client is [`../../common/llm.ts`](../../common/llm.ts).
 
+## The two things people get wrong
+
+- **An unconfident answer is a failure, not a result.** Nothing threw, so it
+  ships. The ladder has to treat `confident: false` exactly like a crash.
+- **A failed rung still costs money.** You paid the small model before you fell
+  off it and paid the large one. The report bills every attempt, not every
+  answer, because that is what the invoice does.
+
 ```
-starter/    what you get in the live session (routing stubbed with TODOs)
-solution/   the worked reference
+starter/    the lab: stubs + TODOs
+solution/   the worked reference, published after the session
 ```
 
-> Worked reference is filled in during the cohort. Session page:
+> Session page:
 > [hub.gazar.dev/llms-and-agents/lab-workflow-router](https://hub.gazar.dev/llms-and-agents/lab-workflow-router/)
