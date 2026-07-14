@@ -11,6 +11,7 @@
  * without calling a model, the seam is in the wrong place.
  */
 import { describe, it, expect } from "vitest";
+import { z } from "zod";
 import {
   chooseTier,
   validateReply,
@@ -64,13 +65,17 @@ describe("validateReply", () => {
     expect(validateReply({ answer: "hi", confident: true })).toEqual({ answer: "hi", confident: true });
   });
 
+  // These assert z.ZodError specifically, not just "it threw". A bare .toThrow()
+  // would pass against the un-implemented stub — the TODO throws, so the test
+  // goes green while nothing works. A test you can satisfy by doing nothing is
+  // worse than no test: it lies to you.
   it("rejects a reply with no answer", () => {
-    expect(() => validateReply({ answer: "", confident: true })).toThrow();
+    expect(() => validateReply({ answer: "", confident: true })).toThrow(z.ZodError);
   });
 
   it("rejects output that is the wrong shape entirely", () => {
-    expect(() => validateReply("just a string")).toThrow();
-    expect(() => validateReply({ reply: "wrong key" })).toThrow();
+    expect(() => validateReply("just a string")).toThrow(z.ZodError);
+    expect(() => validateReply({ reply: "wrong key" })).toThrow(z.ZodError);
   });
 });
 
