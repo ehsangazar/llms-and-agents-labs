@@ -1,0 +1,23 @@
+{
+  "name": "llms-and-agents-labs",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Companion labs for the course: Production-Ready Systems with LLMs and Agents (hub.gazar.dev/llms-and-agents)",
+  "type": "module",
+  "scripts": {
+    "lab": "tsx",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "openai": "^4.77.0",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}
