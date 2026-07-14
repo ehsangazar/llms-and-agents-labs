@@ -12,17 +12,18 @@
  */
 import { describe, it, expect } from "vitest";
 import { z } from "zod";
-import {
-  chooseTier,
-  validateReply,
-  runRouter,
-  Ledger,
-  SAFE_DEFAULT,
-  TIER_COST,
-  type Classification,
-  type RouterDeps,
-  type Reply,
-} from "./starter/router.ts";
+import type { Classification, RouterDeps, Reply } from "./starter/router.ts";
+
+/**
+ * One spec, two implementations. `npm test` runs it against `starter/` — that
+ * is the lab. `npm run test:solution` runs this exact suite against the
+ * published reference, which is what stops the worked solution rotting as the
+ * repo changes. Nothing below this line knows which one it is grading.
+ */
+type RouterModule = typeof import("./starter/router.ts");
+
+const { chooseTier, validateReply, runRouter, Ledger, SAFE_DEFAULT, TIER_COST }: RouterModule =
+  await import(process.env.LAB_IMPL === "solution" ? "./solution/router.ts" : "./starter/router.ts");
 
 const classify = (over: Partial<Classification> = {}): Classification => ({
   category: "technical",

@@ -7,6 +7,7 @@
   "scripts": {
     "lab": "tsx --env-file-if-exists=.env",
     "test": "vitest run",
+    "test:solution": "LAB_IMPL=solution vitest run",
     "test:watch": "vitest",
     "typecheck": "tsc --noEmit"
   },

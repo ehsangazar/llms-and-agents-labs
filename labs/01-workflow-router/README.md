@@ -21,8 +21,24 @@ cost split across the three tiers.
 2. Fill in the four TODOs in [`starter/router.ts`](starter/router.ts):
    `chooseTier`, `validateReply`, `runRouter`, and `Ledger.report`.
 3. `npm test` until it is green. No API key needed.
-4. Then `npm run lab labs/01-workflow-router/starter/index.ts` to run it against
-   a real model and print the bill.
+
+   ```bash
+   npm test          # runs the spec against starter/. All 17 fail on a fresh clone.
+   ```
+
+4. Then run it against a real model and print the bill. This one needs
+   `OPENAI_API_KEY` in `.env`:
+
+   ```bash
+   npm run lab labs/01-workflow-router/starter/index.ts
+   ```
+
+The worked reference lives in [`solution/`](solution/). The same spec grades it:
+
+```bash
+npm run test:solution   # same 17 tests, graded against solution/
+npm run lab labs/01-workflow-router/solution/index.ts
+```
 
 The routing pattern this lab hardens is demonstrated minimally in
 [`../00-patterns/patterns/02-routing.ts`](../00-patterns/patterns/02-routing.ts).
