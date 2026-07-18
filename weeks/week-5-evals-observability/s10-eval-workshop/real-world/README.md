@@ -17,7 +17,7 @@ npm test
 **Watch for:** a full-pass run reporting 1.0 with traces kept, a partial run
 computing the right rate, and an empty suite returning 0 rather than `NaN`.
 
-### The live demo (needs `OPENAI_API_KEY`)
+### The live demo (needs `OPENROUTER_API_KEY`)
 
 ```bash
 npm run lab weeks/week-5-evals-observability/s10-eval-workshop/real-world/index.ts

@@ -1,5 +1,5 @@
 /**
- * S2 real-world example, the runnable demo (needs OPENAI_API_KEY).
+ * S2 real-world example, the runnable demo (needs OPENROUTER_API_KEY).
  *
  * The intake workflow wired to a real model. Watch the call count: it is two,
  * every run, because you decided the steps. The agent version of the same job
@@ -11,7 +11,7 @@
 import { complete, extract } from "../../../../common/llm.ts";
 import { runIntakeWorkflow, Severity, type IntakeDeps } from "./intake.ts";
 
-const MODEL = process.env.LLM_MODEL ?? "gpt-4o-mini";
+const MODEL = process.env.LLM_MODEL ?? "openai/gpt-4o-mini";
 
 const deps: IntakeDeps = {
   summarize: (report) =>

@@ -7,7 +7,7 @@ control and a model that decides, and *when you even need an agent* at all.
 Everything routes through [`common/llm.ts`](../../../common/llm.ts).
 
 **Before you start:** if you have not already, `npm install`, then
-`cp .env.example .env` and add your `OPENAI_API_KEY`. Both scripts call a real
+`cp .env.example .env` and add your `OPENROUTER_API_KEY`. Both scripts call a real
 model. See S1's [Troubleshooting](../s1-why-demos-die#troubleshooting) if a
 command dies on a missing key or a 429.
 

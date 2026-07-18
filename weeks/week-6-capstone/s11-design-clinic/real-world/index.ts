@@ -1,5 +1,5 @@
 /**
- * S11 real-world example, the runnable demo (needs OPENAI_API_KEY).
+ * S11 real-world example, the runnable demo (needs OPENROUTER_API_KEY).
  *
  * The mini copilot on real traffic: small talk skips retrieval, a docs question
  * pulls context and answers, an off-topic question is refused. One entry point,
@@ -11,7 +11,7 @@ import { z } from "zod";
 import { complete, extract } from "../../../../common/llm.ts";
 import { handle, type CopilotDeps } from "./copilot.ts";
 
-const MODEL = process.env.LLM_MODEL ?? "gpt-4o-mini";
+const MODEL = process.env.LLM_MODEL ?? "openai/gpt-4o-mini";
 
 const KB = [
   "Refunds for duplicate charges are issued within 5 business days.",

@@ -27,7 +27,7 @@ cost split across the three tiers.
    ```
 
 4. Then run it against a real model and print the bill. This one needs
-   `OPENAI_API_KEY` in `.env`:
+   `OPENROUTER_API_KEY` in `.env`:
 
    ```bash
    npm run lab weeks/week-1-foundations/lab-workflow-router/starter/index.ts

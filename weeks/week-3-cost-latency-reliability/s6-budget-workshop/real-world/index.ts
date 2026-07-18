@@ -1,5 +1,5 @@
 /**
- * S6 real-world example, the runnable demo (needs OPENAI_API_KEY).
+ * S6 real-world example, the runnable demo (needs OPENROUTER_API_KEY).
  *
  * Answer a question through a fallback ladder: a (deliberately broken) primary,
  * a real model backup, and a canned safe default. The primary is forced to fail
@@ -10,7 +10,7 @@
 import { complete } from "../../../../common/llm.ts";
 import { withFallback, type Step } from "./resilient.ts";
 
-const MODEL = process.env.LLM_MODEL ?? "gpt-4o-mini";
+const MODEL = process.env.LLM_MODEL ?? "openai/gpt-4o-mini";
 const question = "In one sentence, what is a semantic cache?";
 
 const steps: Step<string>[] = [

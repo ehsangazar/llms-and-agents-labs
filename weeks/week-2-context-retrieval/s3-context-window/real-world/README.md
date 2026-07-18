@@ -17,7 +17,7 @@ npm test
 exceeded, and a too-big top piece getting dropped while a smaller one still
 fits.
 
-### The live demo (needs `OPENAI_API_KEY`)
+### The live demo (needs `OPENROUTER_API_KEY`)
 
 ```bash
 npm run lab weeks/week-2-context-retrieval/s3-context-window/real-world/index.ts

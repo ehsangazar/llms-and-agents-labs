@@ -1,5 +1,5 @@
 /**
- * S1 real-world example, the runnable demo (needs OPENAI_API_KEY).
+ * S1 real-world example, the runnable demo (needs OPENROUTER_API_KEY).
  *
  * Wires parseInvoice to a real model. The model returns raw JSON text; the guard
  * validates it. Watch the hostile second input fail LOUDLY instead of writing a
@@ -10,7 +10,7 @@
 import { complete } from "../../../../common/llm.ts";
 import { parseInvoice, type ExtractFn } from "./invoice.ts";
 
-const MODEL = process.env.LLM_MODEL ?? "gpt-4o-mini";
+const MODEL = process.env.LLM_MODEL ?? "openai/gpt-4o-mini";
 
 /** The injected model call: returns UNVALIDATED output. parseInvoice guards it. */
 const extract: ExtractFn = async (fenced) => {

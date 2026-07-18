@@ -15,8 +15,11 @@
  */
 import OpenAI from "openai";
 
-const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
-const MODEL = process.env.LLM_MODEL ?? "gpt-4o-mini";
+const client = new OpenAI({
+  apiKey: process.env.OPENROUTER_API_KEY,
+  baseURL: process.env.LLM_BASE_URL ?? "https://openrouter.ai/api/v1",
+});
+const MODEL = process.env.LLM_MODEL ?? "openai/gpt-4o-mini";
 
 const PLANS: Record<string, string> = {
   "ada@example.com": "Pro ($49/mo), renews 2026-08-01",

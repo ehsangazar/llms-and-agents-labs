@@ -1,5 +1,5 @@
 /**
- * S8 real-world example, the runnable demo (needs OPENAI_API_KEY).
+ * S8 real-world example, the runnable demo (needs OPENROUTER_API_KEY).
  *
  * A document tries to make the agent issue a refund. The model reads the fenced
  * document and may well propose the write, that is fine: the approval gate, not
@@ -12,7 +12,7 @@ import { z } from "zod";
 import { extract } from "../../../../common/llm.ts";
 import { admitTools, performWrite, ApprovalRequired, asData, type ToolSpec } from "./guards.ts";
 
-const MODEL = process.env.LLM_MODEL ?? "gpt-4o-mini";
+const MODEL = process.env.LLM_MODEL ?? "openai/gpt-4o-mini";
 
 // 1. Supply-chain guard: one honest server, one rogue. Only the honest one loads.
 const requested: ToolSpec[] = [

@@ -13,7 +13,7 @@ nothing from the one before it.
 > right after these.
 
 **Before you start:** `npm install`, then `cp .env.example .env` and add your
-`OPENAI_API_KEY`. Every command on this page calls a real model and costs real
+`OPENROUTER_API_KEY`. Every command on this page calls a real model and costs real
 money. If a command dies on a missing key or a 429, see
 [Troubleshooting](#troubleshooting).
 
@@ -116,14 +116,14 @@ which starts with `npm test` and needs no API key.
 
 ## Troubleshooting
 
-**`OpenAIError: The OPENAI_API_KEY environment variable is missing or empty`**
+**`Error: The apiKey option is missing` (or a 401 on the first call)**
 You have no `.env`, or it has no key in it. Run `cp .env.example .env` and add
 your key. The `npm run lab` command loads `.env` for you; running `tsx` directly
 does not.
 
 **`RateLimitError: 429 You exceeded your current quota`**
 Your key works but the account behind it has no credit. Check your
-[OpenAI billing settings](https://platform.openai.com/settings/organization/billing).
+[OpenRouter credits](https://openrouter.ai/credits).
 This is not a code problem.
 
 **Nothing runs and you have no key.** You can still do Lab 1 in full: its tests

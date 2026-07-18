@@ -18,7 +18,7 @@ npm test          # runs every *.test.ts, including this one
 capping the input before the model ever sees it. Those are domain rules the
 schema encodes, not prompt cleverness.
 
-### The live demo (needs `OPENAI_API_KEY`)
+### The live demo (needs `OPENROUTER_API_KEY`)
 
 ```bash
 npm run lab weeks/week-1-foundations/s1-why-demos-die/real-world/index.ts

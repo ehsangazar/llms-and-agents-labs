@@ -4,7 +4,7 @@ Companion code for the course at **[hub.gazar.dev/llms-and-agents](https://hub.g
 
 > **These are reference implementations of *patterns*, not a prescribed stack.**
 > The course teaches architecture decisions that hold regardless of language or
-> vendor. This repo happens to use TypeScript + OpenAI so the patterns are
+> vendor. This repo happens to use TypeScript + OpenRouter so the patterns are
 > runnable and concrete. Everything that touches a vendor lives behind one file
 > (`common/llm.ts`), swap it and the labs still teach the same thing.
 
@@ -35,7 +35,7 @@ that currently hold notes, and fill in as the cohort reaches them.
 
 ```bash
 npm install
-cp .env.example .env    # add your OPENAI_API_KEY
+cp .env.example .env    # add your OPENROUTER_API_KEY
 ```
 
 ## Running a session script or a lab

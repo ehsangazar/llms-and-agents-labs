@@ -18,7 +18,7 @@ npm test
 **Watch for:** the rogue server blocked, the write refused without approval, and
 approval for one action not carrying over to another.
 
-### The live demo (needs `OPENAI_API_KEY`)
+### The live demo (needs `OPENROUTER_API_KEY`)
 
 ```bash
 npm run lab weeks/week-4-agent-architecture-security/s8-securing-agents/real-world/index.ts

@@ -1,5 +1,5 @@
 /**
- * S3 real-world example, the runnable demo (needs OPENAI_API_KEY).
+ * S3 real-world example, the runnable demo (needs OPENROUTER_API_KEY).
  *
  * Assemble a support answer's context under a tight budget, then answer using
  * only what made the cut. The irrelevant filler never reaches the model.
@@ -9,7 +9,7 @@
 import { complete } from "../../../../common/llm.ts";
 import { assembleContext, type Piece } from "./context.ts";
 
-const MODEL = process.env.LLM_MODEL ?? "gpt-4o-mini";
+const MODEL = process.env.LLM_MODEL ?? "openai/gpt-4o-mini";
 
 const question = "Why was I charged twice in July and can I get a refund?";
 

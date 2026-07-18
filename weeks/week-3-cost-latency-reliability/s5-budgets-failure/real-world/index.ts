@@ -1,5 +1,5 @@
 /**
- * S5 real-world example, the runnable demo (needs OPENAI_API_KEY).
+ * S5 real-world example, the runnable demo (needs OPENROUTER_API_KEY).
  *
  * Moderate a few messages on a cheap-then-strong ladder under a per-request
  * budget. Watch a confident cheap call stop early, an unsure one escalate, and
@@ -11,8 +11,8 @@ import { z } from "zod";
 import { extract } from "../../../../common/llm.ts";
 import { moderate, type ModerationDeps } from "./moderate.ts";
 
-const MODEL_CHEAP = process.env.LLM_MODEL_SMALL ?? "gpt-4o-mini";
-const MODEL_STRONG = process.env.LLM_MODEL_LARGE ?? "gpt-4o";
+const MODEL_CHEAP = process.env.LLM_MODEL_SMALL ?? "openai/gpt-4o-mini";
+const MODEL_STRONG = process.env.LLM_MODEL_LARGE ?? "openai/gpt-4o";
 
 const Judgement = z.object({
   verdict: z.enum(["allow", "block"]),

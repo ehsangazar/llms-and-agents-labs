@@ -1,5 +1,5 @@
 /**
- * S7 real-world example, the runnable demo (needs OPENAI_API_KEY).
+ * S7 real-world example, the runnable demo (needs OPENROUTER_API_KEY).
  *
  * A real model drives the ReAct loop as the policy, choosing between a `lookup`
  * tool and finishing. The step cap is still there as the guardrail. Watch the
@@ -11,7 +11,7 @@ import { z } from "zod";
 import { extract } from "../../../../common/llm.ts";
 import { runAgent, type Policy, type Tools } from "./agent.ts";
 
-const MODEL = process.env.LLM_MODEL ?? "gpt-4o-mini";
+const MODEL = process.env.LLM_MODEL ?? "openai/gpt-4o-mini";
 
 const PLANS: Record<string, string> = { "ada@example.com": "Pro ($49/mo), renews 2026-08-01" };
 const tools: Tools = {

@@ -18,7 +18,7 @@ npm test
 **Watch for:** the assertion that the run always costs two calls, and that the
 severity the classifier returns is validated before it reaches the ticket.
 
-### The live demo (needs `OPENAI_API_KEY`)
+### The live demo (needs `OPENROUTER_API_KEY`)
 
 ```bash
 npm run lab weeks/week-1-foundations/s2-model-boundary/real-world/index.ts

@@ -17,7 +17,7 @@ npm test
 **Watch for:** a below-threshold section forcing a hold, and a safety failure
 forcing a hold even at a perfect pass rate.
 
-### The live demo (needs `OPENAI_API_KEY`)
+### The live demo (needs `OPENROUTER_API_KEY`)
 
 ```bash
 npm run lab weeks/week-6-capstone/s12-presentations/real-world/index.ts

@@ -18,7 +18,7 @@ npm test
 **Watch for:** the observation being fed back into the policy, and the runaway
 policy hitting the cap at exactly `maxSteps` instead of looping forever.
 
-### The live demo (needs `OPENAI_API_KEY`)
+### The live demo (needs `OPENROUTER_API_KEY`)
 
 ```bash
 npm run lab weeks/week-4-agent-architecture-security/s7-agent-patterns/real-world/index.ts

@@ -1,5 +1,5 @@
 /**
- * S12 real-world example, the runnable demo (needs OPENAI_API_KEY).
+ * S12 real-world example, the runnable demo (needs OPENROUTER_API_KEY).
  *
  * Fold a set of eval results into a ship / hold scorecard, then have a model
  * write the one-paragraph review summary you would open the design review with.
@@ -10,7 +10,7 @@
 import { complete } from "../../../../common/llm.ts";
 import { buildScorecard, type Section } from "./scorecard.ts";
 
-const MODEL = process.env.LLM_MODEL ?? "gpt-4o-mini";
+const MODEL = process.env.LLM_MODEL ?? "openai/gpt-4o-mini";
 
 const sections: Section[] = [
   { name: "routing (Lab 1)", passRate: 0.96 },

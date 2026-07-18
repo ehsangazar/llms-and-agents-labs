@@ -1,5 +1,5 @@
 /**
- * S10 real-world example, the runnable demo (needs OPENAI_API_KEY).
+ * S10 real-world example, the runnable demo (needs OPENROUTER_API_KEY).
  *
  * Run a small golden set through a real model classifier and print a pass-rate
  * report with the trace for each case. This is the harness Lab 5 grows into a
@@ -11,7 +11,7 @@ import { z } from "zod";
 import { extract } from "../../../../common/llm.ts";
 import { runSuite, type Case } from "./harness.ts";
 
-const MODEL = process.env.LLM_MODEL ?? "gpt-4o-mini";
+const MODEL = process.env.LLM_MODEL ?? "openai/gpt-4o-mini";
 
 const Category = z.object({ category: z.enum(["billing", "technical", "sales"]) });
 

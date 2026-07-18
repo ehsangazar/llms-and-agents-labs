@@ -6,7 +6,7 @@
  *
  * Run it:  npm run lab weeks/week-1-foundations/lab-workflow-router/solution/index.ts
  *
- * Needs OPENAI_API_KEY in .env. The tests do not — that is the point of the
+ * Needs OPENROUTER_API_KEY in .env. The tests do not — that is the point of the
  * seam. Get `npm test` green first, then come here.
  */
 import { extract } from "../../../../common/llm.ts";
@@ -22,8 +22,8 @@ import {
 
 /** Which real model backs each tier. Right-sizing, in one object. */
 const MODEL_FOR: Record<"small" | "large", string> = {
-  small: process.env.LLM_MODEL_SMALL ?? "gpt-4o-mini",
-  large: process.env.LLM_MODEL_LARGE ?? "gpt-4o",
+  small: process.env.LLM_MODEL_SMALL ?? "openai/gpt-4o-mini",
+  large: process.env.LLM_MODEL_LARGE ?? "openai/gpt-4o",
 };
 
 const deps: RouterDeps = {

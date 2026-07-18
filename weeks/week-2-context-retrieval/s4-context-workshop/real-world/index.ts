@@ -1,5 +1,5 @@
 /**
- * S4 real-world example, the runnable demo (needs OPENAI_API_KEY).
+ * S4 real-world example, the runnable demo (needs OPENROUTER_API_KEY).
  *
  * Run a small doc set through the pipeline (dedup + freshness + budget), then
  * answer from what survives. Note the stale duplicate and the old doc getting
@@ -10,7 +10,7 @@
 import { complete } from "../../../../common/llm.ts";
 import { prepareContext, type Doc } from "./pipeline.ts";
 
-const MODEL = process.env.LLM_MODEL ?? "gpt-4o-mini";
+const MODEL = process.env.LLM_MODEL ?? "openai/gpt-4o-mini";
 
 const question = "How long do refunds take?";
 

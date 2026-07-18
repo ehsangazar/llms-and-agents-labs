@@ -17,7 +17,7 @@ npm test
 **Watch for:** the correct path passing, a missing `check_policy` failing, and
 refund-before-policy failing as out of order even though both end the same way.
 
-### The live demo (needs `OPENAI_API_KEY`)
+### The live demo (needs `OPENROUTER_API_KEY`)
 
 ```bash
 npm run lab weeks/week-5-evals-observability/s9-trajectory-evals/real-world/index.ts

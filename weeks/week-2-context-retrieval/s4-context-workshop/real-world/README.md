@@ -17,7 +17,7 @@ npm test
 **Watch for:** the stale duplicate collapsing into the fresh one, a fresher doc
 overtaking a higher raw-relevance stale doc, and the budget respected.
 
-### The live demo (needs `OPENAI_API_KEY`)
+### The live demo (needs `OPENROUTER_API_KEY`)
 
 ```bash
 npm run lab weeks/week-2-context-retrieval/s4-context-workshop/real-world/index.ts

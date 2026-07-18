@@ -18,7 +18,7 @@ npm test
 through to the next rung, and every-step-fails returning the safe default with
 the full failure map intact.
 
-### The live demo (needs `OPENAI_API_KEY`)
+### The live demo (needs `OPENROUTER_API_KEY`)
 
 ```bash
 npm run lab weeks/week-3-cost-latency-reliability/s6-budget-workshop/real-world/index.ts

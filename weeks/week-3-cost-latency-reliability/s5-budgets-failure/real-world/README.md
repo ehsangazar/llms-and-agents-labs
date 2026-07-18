@@ -18,7 +18,7 @@ npm test
 is unsure, and a budget too small to escalate producing a `block` from the
 safe default, having paid only for the rung it actually reached.
 
-### The live demo (needs `OPENAI_API_KEY`)
+### The live demo (needs `OPENROUTER_API_KEY`)
 
 ```bash
 npm run lab weeks/week-3-cost-latency-reliability/s5-budgets-failure/real-world/index.ts

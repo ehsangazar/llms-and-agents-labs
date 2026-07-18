@@ -17,7 +17,7 @@ npm test
 **Watch for:** small talk skipping retrieval entirely, the full path running for
 a docs question with context, and a refusal when nothing relevant comes back.
 
-### The live demo (needs `OPENAI_API_KEY`)
+### The live demo (needs `OPENROUTER_API_KEY`)
 
 ```bash
 npm run lab weeks/week-6-capstone/s11-design-clinic/real-world/index.ts

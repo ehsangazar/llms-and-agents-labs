@@ -9,10 +9,14 @@ import OpenAI from "openai";
 import { zodResponseFormat } from "openai/helpers/zod";
 import type { z } from "zod";
 
-const MODEL = process.env.LLM_MODEL ?? "gpt-4o-mini";
+const MODEL = process.env.LLM_MODEL ?? "openai/gpt-4o-mini";
 
+// OpenRouter is OpenAI-compatible, so we keep the `openai` SDK and just point
+// it at OpenRouter's base URL with an OpenRouter key. This is the whole reason
+// the vendor lives behind one file: the swap is a base URL and a key.
 const client = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
+  apiKey: process.env.OPENROUTER_API_KEY,
+  baseURL: process.env.LLM_BASE_URL ?? "https://openrouter.ai/api/v1",
 });
 
 export interface Message {
